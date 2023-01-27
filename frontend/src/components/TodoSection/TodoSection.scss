@@ -1,0 +1,53 @@
+/* A placeholder to generate basic flex properties. */
+%flex-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-details {
+  width: 100%;
+}
+
+.flex-item {
+  @extend %flex-layout;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-direction: row;
+
+  .todo-title {
+    width: 100%;
+  }
+
+  input[type="checkbox"] {
+    width: 10%;
+  }
+
+  i {
+    padding-right: 1em;
+    cursor: pointer;
+  }
+
+  h4 {
+    padding: 1em;
+    width: 30%;
+  }
+
+  p {
+    padding: 1em;
+    width: 70%;
+  }
+}
+
+.todo-item {
+  @extend %flex-layout;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding-top: 1rem;
+}
+
+// to strike through the todo title when a checkbox is checked.
+.strikethrough {
+  text-decoration: line-through;
+}
